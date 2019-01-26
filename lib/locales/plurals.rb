@@ -1,6 +1,8 @@
+# See https://ddnexus.github.io/pagy/api/frontend#i18n
+# frozen_string_literal: true
+
 # This file adds support for multiple built-in plualization types.
 # It defines the pluralization procs and gets eval(ed) at I18N.load time.
-# frozen_string_literal: true
 
 # utility variables
 zero_one   = ['zero', 'one'].freeze
@@ -37,7 +39,7 @@ plurals = {
 }
 
 # Languages (language/plural pairs)
-# Contain all the entries for all the languages defined in the dictionaries.
+# Contain all the entries for all the languages defined as dictionaries.
 # The default plural for languages not explicitly listed here
 # is the :zero_one_other plural (used for English)
 Hash.new(plurals[:zero_one_other]).tap do |languages|
